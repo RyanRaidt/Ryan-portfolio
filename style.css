@@ -1,0 +1,17 @@
+.links{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  text-align: right;
+
+}
+
+.me{
+     position: fixed;
+  top: 50px;;
+  right: 0;
+  padding: 20px;
+  text-align: right;
+
+}
