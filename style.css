@@ -14,12 +14,6 @@
   text-align: right;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
 header {
   padding: 40px;
   font-size: 24px;
@@ -51,3 +45,7 @@ main {
   padding: 350px;
   text-align: center;
 }
+p {
+  font-size: 1.2em; /* 14px/16=0.875em */
+}
+
