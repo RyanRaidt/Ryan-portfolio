@@ -1,0 +1,53 @@
+.links {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  text-align: right;
+}
+
+.me {
+  position: fixed;
+  top: 50px;
+  right: 0;
+  padding: 20px;
+  text-align: right;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 40px;
+  font-size: 24px;
+}
+
+main {
+  padding: 40px;
+  max-width: 700px;
+  margin: none;
+  text-align: left;
+}
+.aboutme {
+  padding: 40px;
+  max-width: 500px;
+}
+
+.woodworking {
+  position: fixed;
+  top: 50px;
+  right: 0;
+  padding: 20px;
+  text-align: right;
+}
+
+.websitebuild {
+  position: fixed;
+  top: 250px;
+  right: 0;
+  padding: 350px;
+  text-align: center;
+}
