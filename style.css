@@ -1,10 +1,22 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background: url(test1.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
 .links {
   position: absolute;
   top: 0;
   right: 0;
   padding: 20px;
   text-align: right;
+  color: white;
+  font-size: x-large;
 }
+ 
 
 .me {
   position: fixed;
