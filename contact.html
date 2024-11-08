@@ -13,42 +13,77 @@
       <a href="portfolio.html">Portfolio</a>
       <a href="contact.html">Contact</a>
     </nav>
+
+    <!-- Video background -->
+    <video autoplay muted loop id="myVideo">
+      <source src="video.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰</button>
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+
+    <section class="contact-align">
+      <h2>Contact Me</h2>
+      <form id="form">
+        <div class="name">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Your Name"
+          />
+        </div>
+
+        <div class="email">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Your Email"
+          />
+        </div>
+
+        <div class="message">
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            required
+            placeholder="Your Message"
+          ></textarea>
+        </div>
+
+        <div class="submit">
+          <button id="submit" type="submit"><strong>Submit</strong></button>
+        </div>
+      </form>
+    </section>
+    <script src="javascript.js"></script>
   </body>
-
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Contact Form</title>
-      <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-      <section class="contact-align">
-        <h2>Contact Me</h2>
-        <form id="form">
-          <div class="name">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-
-          <div class="email">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-
-            <div class="message">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-          </div>
-
-          <div class="submit">
-            <button id="submit" type="submit"><strong>Submit</strong></button>
-          </div>
-
-        </form>
-      </section>
-      <script src="javascript.js"></script>
-    </body>
-  </html>
 </html>

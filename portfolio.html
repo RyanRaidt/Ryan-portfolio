@@ -19,6 +19,36 @@
      <a href="contact.html">Contact</a>
   </nav>
 
+ <!-- Video background -->
+    <video autoplay muted loop id="myVideo">
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+
+<div id="mySidebar" class="sidebar">
+<a href="javascript:void(0)" class="
+closebtn" onclick="closeNav()">x</a>
+<a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="contact.html">Contact</a>
+</div>
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>  
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
   <main>
     
 
@@ -30,7 +60,7 @@
         <p>
           This website is my first project as I learn web development. It's a simple HTML, CSS, and JavaScript website that introduces who I am and what I'm learning. I’m using it to practice building and styling layouts, linking pages, and adding images.
         </p>
-        <p>
+        <p class="projectP">
           <strong>Technologies Used:</strong> HTML, CSS, JavaScript
         </p>
         <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIbP-zge5pndFrOs0l5Xza9nhO3Tzidr5VjA&s" alt="website building"></div>

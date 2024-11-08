@@ -1,4 +1,4 @@
- *{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,8 +7,6 @@
 body {
   font-family: Arial, sans-serif;
   color: white;
-  background: url(background.webp) no-repeat center center/cover;
-  background-attachment: fixed;
 }
 
 /* nav links */
@@ -86,10 +84,10 @@ section {
 
 .skills-grid {
   display: flex;
-  flex-wrap: wrap; 
-  gap: 10px; 
-  justify-content: center; 
-  max-width: 100%; 
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  max-width: 100%;
 }
 /* z-index */
 .skill {
@@ -132,10 +130,14 @@ main {
   text-align: right;
 }
 
-.landimg{
+.woodworking:hover {
+}
+
+.landimg {
   width: 275px;
   height: 183px;
 }
+
 .websitebuild {
   position: fixed;
   top: 250px;
@@ -167,6 +169,11 @@ p {
   padding: 20px;
   border-radius: 8px;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  opacity: 95%;
+}
+
+.projectP{
+  padding: 20px;
 }
 
 .project1 {
@@ -175,6 +182,7 @@ p {
   margin: 2rem;
   border-radius: 8px;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  opacity: 95%;
 }
 
 .project:hover {
@@ -185,34 +193,6 @@ p {
 .project1:hover {
   background-color: #292929;
   transform: translateY(-5px);
-}
-
-.contact-align{
-  text-align: center;
-  align-items: center;
-gap:20px;
-padding-right:10%;
-display: grid;
-grid-template-columns: 1fr 1 fr;
-}
-
-.name{
-  padding: 5px;
-}
-
-.email{
-  padding: 5px;
-}
-
-.message{
-  padding: 5px;
-  padding-right: 35px;
-}
-
-.submit{
-  padding: 5px;
-  padding-left: 40px;
-  font-size: larger;
 }
 
 @media (max-width: 768px) {
@@ -226,5 +206,107 @@ grid-template-columns: 1fr 1 fr;
 }
 
 .skills-grid {
-    grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* sidebar section */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: flex;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
   }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+/* Video Background */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: fill;
+  z-index: -1;
+  transform: scale(1);
+}
+
+.contact-align {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: auto;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+/* Form Styling */
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.Thank-You {
+  text-align: center;
+  padding-top: 5%;
+}
