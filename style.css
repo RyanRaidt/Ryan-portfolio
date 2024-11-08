@@ -130,9 +130,6 @@ main {
   text-align: right;
 }
 
-.woodworking:hover {
-}
-
 .landimg {
   width: 275px;
   height: 183px;
@@ -172,7 +169,7 @@ p {
   opacity: 95%;
 }
 
-.projectP{
+.projectP {
   padding: 20px;
 }
 
