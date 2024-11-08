@@ -1,54 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Submission Successful</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submission Successful</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="Thank-You">
+      <h2>Thank You!</h2>
+      <p>
+        Your message has been successfully submitted. You will be redirected
+        shortly.
+      </p>
+    </div>
+    <!-- Video background -->
+    <video autoplay muted loop id="myVideo">
+      <source src="video.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
 
-<div class="Thank-You">
-  <h2>Thank You!</h2>
-  <p>Your message has been successfully submitted.</p>
-</div>
-
-  <nav class="links" aria-label="Main navigation">
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="contact.html">Contact</a>
-    </nav>
+    </div>
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">☰</button>
+    </div>
 
- <!-- Video background -->
-    <video autoplay muted loop id="myVideo">
-      <source src="video.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
 
-<div id="mySidebar" class="sidebar">
-<a href="javascript:void(0)" class="
-closebtn" onclick="closeNav()">x</a>
-<a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="contact.html">Contact</a>
-</div>
-<div id="main">
-  <button class="openbtn" onclick="openNav()">☰</button>  
-</div>
-
-<script>
-function openNav() {
-  document.getElementById("mySidebar").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-</script>
-<script src="success.js"></script>
-</body>
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+    <script src="success.js"></script>
+  </body>
 </html>
