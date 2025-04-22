@@ -81,4 +81,4 @@ portfolio/
 - Email: ryanraidt1026@gmail.com
 - LinkedIn: [Ryan Raidt](https://linkedin.com/in/ryan-raidt)
 - GitHub: [RyanRaidt](https://github.com/RyanRaidt)
-
+- Portfolio: https://ryanraidtportfolio.netlify.app/
