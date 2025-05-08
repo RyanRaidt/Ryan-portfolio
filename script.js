@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Initialize AOS
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100,
+    easing: "ease-out-cubic",
+  });
+
   // Smooth scrolling for navigation links
   const navLinks = document.querySelectorAll('nav a[href^="#"]');
   navLinks.forEach((link) => {
@@ -6,10 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       const targetId = this.getAttribute("href");
       const targetElement = document.querySelector(targetId);
-      const headerOffset = 60;
+      const headerOffset = 80;
       const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition =
-        elementPosition + window.pageYOffset - headerOffset;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
       window.scrollTo({
         top: offsetPosition,
@@ -91,4 +98,53 @@ document.addEventListener("DOMContentLoaded", function () {
   scrollTopButton.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+  // Section highlighting
+  const sections = document.querySelectorAll("section");
+  const headerHeight = document.querySelector("header").offsetHeight;
+
+  function updateActiveSection() {
+    const scrollPosition = window.scrollY + headerHeight + 100;
+    let currentSection = null;
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const sectionBottom = sectionTop + sectionHeight;
+      const sectionId = section.getAttribute("id");
+
+      // Check if we're in the top 40% of the section
+      if (
+        scrollPosition >= sectionTop &&
+        scrollPosition < sectionTop + sectionHeight * 0.4
+      ) {
+        currentSection = sectionId;
+      }
+    });
+
+    // Update active link
+    if (currentSection) {
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${currentSection}`) {
+          link.classList.add("active");
+        }
+      });
+    }
+  }
+
+  // Update active section on scroll with throttling
+  let ticking = false;
+  window.addEventListener("scroll", function () {
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        updateActiveSection();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  // Initial check for active section
+  updateActiveSection();
 });

@@ -4,10 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ryan Raidt Full Stack Web Developer | Software Engineer</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta name="theme-color" content="#3B82F6" />
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
   </head>
   <body>
@@ -28,18 +37,23 @@
       <section id="home">
         <div class="profile-container">
           <img
-            src="LinkedIn profile.jpg"
+            src="images/LinkedIn profile.jpg"
             alt="Ryan Raidt"
             class="profile-picture"
           />
           <div class="profile-info">
             <h1>Ryan Raidt</h1>
             <p>Full Stack Web Developer</p>
+            <p class="hero-summary">
+              Passionate full-stack developer crafting modern, scalable web
+              applications with React, Node.js, and PostgreSQL, focused on
+              delivering exceptional user experiences.
+            </p>
           </div>
         </div>
       </section>
 
-      <section id="about">
+      <section id="about" data-aos="fade-up" data-aos-duration="800">
         <h2>About Me</h2>
         <p>
           Dedicated web development professional with experience in front-end
@@ -51,209 +65,305 @@
         </p>
       </section>
 
-      <section id="skills">
+      <section id="skills" data-aos="fade-up" data-aos-duration="800">
         <h2>Technical Skills</h2>
-        <ul>
-          <li><strong>Languages:</strong> HTML, CSS, JavaScript</li>
-          <li>
-            <strong>Frontend:</strong> React, React Router, Context API, Chakra
-            UI, React Query
-          </li>
-          <li><strong>Backend:</strong> Node.js, Express.js, Prisma</li>
-          <li><strong>Databases:</strong> PostgreSQL, MongoDB, Supabase</li>
-          <li>
-            <strong>Tools & Platforms:</strong> VS Code, Postman, Git/GitHub,
-            Vite, Render, Netlify
-          </li>
-          <li>
-            <strong>Technologies & Protocols:</strong> RESTful APIs, JWT, Google
-            OAuth 2.0
-          </li>
-        </ul>
-      </section>
-
-      <section id="projects">
-        <h2>Technical Projects</h2>
-        <div class="project-item">
-          <div class="project-image">
-            <a
-              href="https://recipe-round-table-frontend.onrender.com/"
-              target="_blank"
-            >
-              <img
-                src="RecipeRoundTable.jpg"
-                alt="Recipe Round Table"
-                class="project-thumbnail"
-              />
-            </a>
-          </div>
-          <div class="project-details">
-            <h3>Capstone Project: Recipe Round Table</h3>
-            <p><em>January 2, 2025 – January 29, 2025</em></p>
+        <div class="skills-grid">
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+            <h3>Frontend</h3>
             <ul>
+              <li><i class="fa-brands fa-html5"></i> HTML5</li>
+              <li><i class="fa-brands fa-css3-alt"></i> CSS3</li>
+              <li><i class="fa-brands fa-js"></i> JavaScript</li>
+              <li><i class="fa-brands fa-react"></i> React</li>
               <li>
-                Developed a full-stack, community-driven recipe-sharing platform
-                as part of an intensive software engineering program.
+                <img
+                  src="images/react-router.256x140.png"
+                  alt="React router"
+                  class="skill-icon"
+                />
+                React Router
+              </li>
+              <li><i class="fa-brands fa-react"></i> Context API</li>
+              <li>
+                <img
+                  src="images/chakra-ui-48.png"
+                  alt="Chakra UI"
+                  class="skill-icon"
+                />
+                Chakra UI
               </li>
               <li>
-                Collaboratively contributed to backend development, including
-                database schema design, API creation, and integration using
-                Node.js, Prisma, and PostgreSQL.
-              </li>
-              <li>
-                Built responsive user interfaces with React, ensuring a seamless
-                and user-friendly experience across devices.
-              </li>
-              <li>
-                Designed and implemented admin functionalities for user, recipe,
-                and report management to enhance platform moderation
-                capabilities.
-              </li>
-              <li>
-                Leveraged tools like Vite for optimized development workflows
-                and integrated Google OAuth for secure user authentication.
+                <img
+                  src="images/react-query-icon_.png"
+                  alt="React Query"
+                  class="skill-icon"
+                />
+                React Query
               </li>
             </ul>
-            <p>
-              <strong>Tools and Technologies:</strong> JavaScript, React,
-              Node.js, Prisma, PostgreSQL, Vite, Axios, bcrypt, JWT, Postman,
-              Git/GitHub, dotenv, Multer.
-            </p>
-            <p>
-              <strong>GitHub Repository:</strong>
-              <a href="https://github.com/RyanRaidt/recipeSite" target="_blank"
-                >https://github.com/RyanRaidt/recipeSite</a
-              >
-            </p>
-            <p>
-              <strong>Website Link:</strong>
+          </div>
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+            <h3>Backend</h3>
+            <ul>
+              <li><i class="fa-brands fa-node-js"></i> Node.js</li>
+              <li>
+                <img
+                  src="images/express-icon.png"
+                  alt="Express.js"
+                  class="skill-icon"
+                />
+                Express.js
+              </li>
+              <li>
+                <img
+                  src="images/prisma-icon.png"
+                  alt="Prisma"
+                  class="skill-icon"
+                />
+                Prisma
+              </li>
+              <li>
+                <img
+                  src="images/postgres.995x1024.png"
+                  alt="PostgreSQL"
+                  class="skill-icon"
+                />
+                PostgreSQL
+              </li>
+              <li>
+                <img
+                  src="images/file-type-mongo.115x256.png"
+                  alt="MongoDB"
+                  class="skill-icon"
+                />
+                MongoDB
+              </li>
+              <li>
+                <img
+                  src="images/supabase-logo-icon.png"
+                  alt="Supabase"
+                  class="skill-icon"
+                />
+                Supabase
+              </li>
+              <li><i class="fa-solid fa-plug"></i> RESTful APIs</li>
+              <li><i class="fa-solid fa-key"></i> JWT</li>
+            </ul>
+          </div>
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+            <h3>Tools & DevOps</h3>
+            <ul>
+              <li><i class="fa-solid fa-code"></i> VS Code</li>
+              <li><i class="fa-solid fa-paper-plane"></i> Postman</li>
+              <li><i class="fa-brands fa-github"></i> Git/GitHub</li>
+              <li><i class="fa-solid fa-bolt"></i> Vite</li>
+              <li><i class="fa-solid fa-server"></i> Render</li>
+              <li>
+                <img
+                  src="images/netlify.256x256.png"
+                  alt="Netlify"
+                  class="skill-icon"
+                />
+                Netlify
+              </li>
+              <li><i class="fa-brands fa-google"></i> Google OAuth</li>
+              <li><i class="fa-solid fa-code-branch"></i> CI/CD</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" data-aos="fade-up" data-aos-duration="800">
+        <h2>Technical Projects</h2>
+        <div class="projects-grid">
+          <div class="project-item" data-aos="zoom-in" data-aos-delay="100">
+            <div class="project-image">
               <a
                 href="https://recipe-round-table-frontend.onrender.com/"
                 target="_blank"
-                >https://recipe-round-table-frontend.onrender.com/</a
               >
-              (Please note that since it's hosted on Render's free plan, it may
-              take a couple of minutes to spin up.)
-            </p>
+                <img
+                  src="images/RecipeRoundTable.jpg"
+                  alt="Recipe Round Table"
+                  class="project-thumbnail"
+                />
+              </a>
+            </div>
+            <div class="project-details">
+              <h3>Capstone Project: Recipe Round Table</h3>
+              <p><em>January 2, 2025 – January 29, 2025</em></p>
+              <ul>
+                <li>
+                  Developed a full-stack, community-driven recipe-sharing
+                  platform as part of an intensive software engineering program.
+                </li>
+                <li>
+                  Collaboratively contributed to backend development, including
+                  database schema design, API creation, and integration using
+                  Node.js, Prisma, and PostgreSQL.
+                </li>
+                <li>
+                  Built responsive user interfaces with React, ensuring a
+                  seamless and user-friendly experience across devices.
+                </li>
+                <li>
+                  Designed and implemented admin functionalities for user,
+                  recipe, and report management to enhance platform moderation
+                  capabilities.
+                </li>
+                <li>
+                  Leveraged tools like Vite for optimized development workflows
+                  and integrated Google OAuth for secure user authentication.
+                </li>
+              </ul>
+              <p>
+                <strong>Tools and Technologies:</strong> JavaScript, React,
+                Node.js, Prisma, PostgreSQL, Vite, Axios, bcrypt, JWT, Postman,
+                Git/GitHub, dotenv, Multer.
+              </p>
+              <p>
+                <strong>GitHub Repository:</strong>
+                <a
+                  href="https://github.com/RyanRaidt/recipeSite"
+                  target="_blank"
+                  >https://github.com/RyanRaidt/recipeSite</a
+                >
+              </p>
+              <p>
+                <strong>Website Link:</strong>
+                <a
+                  href="https://recipe-round-table-frontend.onrender.com/"
+                  target="_blank"
+                  >https://recipe-round-table-frontend.onrender.com/</a
+                >
+                (Please note that since it's hosted on Render's free plan, it
+                may take a couple of minutes to spin up.)
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="project-item">
-          <div class="project-image">
-            <a href="https://ryan-task-manger-pro.netlify.app/" target="_blank">
-              <img
-                src="task-manger-pro.PNG"
-                alt="Task Manager Pro"
-                class="project-thumbnail"
-              />
-            </a>
-          </div>
-          <div class="project-details">
-            <h3>Task Manager Pro</h3>
-            <p><em>March 19, 2025</em></p>
-            <ul>
-              <li>
-                Developed a full-stack task management application with secure
-                user authentication and real-time task management.
-              </li>
-              <li>
-                Implemented a modern, responsive UI using React and Chakra UI
-                for an intuitive user experience.
-              </li>
-              <li>
-                Created a robust RESTful API using Node.js and Express, with
-                MongoDB for data storage.
-              </li>
-              <li>
-                Integrated JWT authentication and bcrypt for secure user
-                sessions and password hashing.
-              </li>
-              <li>
-                Added features like task prioritization, status tracking, and
-                toast notifications for user feedback.
-              </li>
-            </ul>
-            <p>
-              <strong>Tools and Technologies:</strong> JavaScript, React,
-              Node.js, Express, MongoDB, Chakra UI, JWT, bcrypt, Axios, Context
-              API, Git/GitHub, Netlify
-            </p>
-            <p>
-              <strong>GitHub Repository:</strong>
-              <a
-                href="https://github.com/RyanRaidt/task-manger-pro"
-                target="_blank"
-                >https://github.com/RyanRaidt/task-manager-pro</a
-              >
-            </p>
-            <p>
-              <strong>Website Link:</strong>
+          <div class="project-item" data-aos="zoom-in" data-aos-delay="200">
+            <div class="project-image">
               <a
                 href="https://ryan-task-manger-pro.netlify.app/"
                 target="_blank"
-                >https://ryan-task-manger-pro.netlify.app/</a
               >
-            </p>
+                <img
+                  src="images/task-manger-pro.PNG"
+                  alt="Task Manager Pro"
+                  class="project-thumbnail"
+                />
+              </a>
+            </div>
+            <div class="project-details">
+              <h3>Task Manager Pro</h3>
+              <p><em>March 19, 2025</em></p>
+              <ul>
+                <li>
+                  Developed a full-stack task management application with secure
+                  user authentication and real-time task management.
+                </li>
+                <li>
+                  Implemented a modern, responsive UI using React and Chakra UI
+                  for an intuitive user experience.
+                </li>
+                <li>
+                  Created a robust RESTful API using Node.js and Express, with
+                  MongoDB for data storage.
+                </li>
+                <li>
+                  Integrated JWT authentication and bcrypt for secure user
+                  sessions and password hashing.
+                </li>
+                <li>
+                  Added features like task prioritization, status tracking, and
+                  toast notifications for user feedback.
+                </li>
+              </ul>
+              <p>
+                <strong>Tools and Technologies:</strong> JavaScript, React,
+                Node.js, Express, MongoDB, Chakra UI, JWT, bcrypt, Axios,
+                Context API, Git/GitHub, Netlify
+              </p>
+              <p>
+                <strong>GitHub Repository:</strong>
+                <a
+                  href="https://github.com/RyanRaidt/task-manger-pro"
+                  target="_blank"
+                  >https://github.com/RyanRaidt/task-manager-pro</a
+                >
+              </p>
+              <p>
+                <strong>Website Link:</strong>
+                <a
+                  href="https://ryan-task-manger-pro.netlify.app/"
+                  target="_blank"
+                  >https://ryan-task-manger-pro.netlify.app/</a
+                >
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="project-item">
-          <div class="project-image">
-            <a href="https://ryan-job-trackers.netlify.app/" target="_blank">
-              <img
-                src="job-tracker.PNG"
-                alt="Job Tracker"
-                class="project-thumbnail"
-              />
-            </a>
-          </div>
-          <div class="project-details">
-            <h3>Job Tracker Application</h3>
-            <p><em>March 28, 2025</em></p>
-            <ul>
-              <li>
-                Developed a full-stack job application tracking system with
-                secure user authentication.
-              </li>
-              <li>
-                Implemented a modern, responsive UI using React and Chakra UI
-                with dark/light mode support.
-              </li>
-              <li>
-                Created a robust RESTful API using Node.js, Express, and
-                PostgreSQL with Prisma ORM.
-              </li>
-              <li>
-                Integrated JWT authentication for secure user sessions and data
-                protection.
-              </li>
-              <li>
-                Implemented features like job application tracking, status
-                updates, and data persistence.
-              </li>
-            </ul>
-            <p>
-              <strong>Tools and Technologies:</strong> JavaScript, React,
-              Node.js, Express, PostgreSQL, Prisma, Chakra UI, JWT, React Query,
-              React Router, Vite, Git/GitHub, Netlify, Render
-            </p>
-            <p>
-              <strong>GitHub Repository:</strong>
-              <a href="https://github.com/RyanRaidt/job-tracker" target="_blank"
-                >https://github.com/RyanRaidt/job-tracker</a
-              >
-            </p>
-            <p>
-              <strong>Website Link:</strong>
-              <a href="https://ryan-job-trackers.netlify.app/" target="_blank"
-                >https://ryan-job-trackers.netlify.app/</a
-              >
-            </p>
+          <div class="project-item" data-aos="zoom-in" data-aos-delay="300">
+            <div class="project-image">
+              <a href="https://ryan-job-trackers.netlify.app/" target="_blank">
+                <img
+                  src="images/  job-tracker.PNG"
+                  alt="Job Tracker"
+                  class="project-thumbnail"
+                />
+              </a>
+            </div>
+            <div class="project-details">
+              <h3>Job Tracker Application</h3>
+              <p><em>March 28, 2025</em></p>
+              <ul>
+                <li>
+                  Developed a full-stack job application tracking system with
+                  secure user authentication.
+                </li>
+                <li>
+                  Implemented a modern, responsive UI using React and Chakra UI
+                  with dark/light mode support.
+                </li>
+                <li>
+                  Created a robust RESTful API using Node.js, Express, and
+                  PostgreSQL with Prisma ORM.
+                </li>
+                <li>
+                  Integrated JWT authentication for secure user sessions and
+                  data protection.
+                </li>
+                <li>
+                  Implemented features like job application tracking, status
+                  updates, and data persistence.
+                </li>
+              </ul>
+              <p>
+                <strong>Tools and Technologies:</strong> JavaScript, React,
+                Node.js, Express, PostgreSQL, Prisma, Chakra UI, JWT, React
+                Query, React Router, Vite, Git/GitHub, Netlify, Render
+              </p>
+              <p>
+                <strong>GitHub Repository:</strong>
+                <a
+                  href="https://github.com/RyanRaidt/job-tracker"
+                  target="_blank"
+                  >https://github.com/RyanRaidt/job-tracker</a
+                >
+              </p>
+              <p>
+                <strong>Website Link:</strong>
+                <a href="https://ryan-job-trackers.netlify.app/" target="_blank"
+                  >https://ryan-job-trackers.netlify.app/</a
+                >
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="education">
+      <section id="education" data-aos="fade-up" data-aos-duration="800">
         <h2>Education</h2>
-        <div class="education-item">
+        <div class="education-item" data-aos="fade-up" data-aos-delay="100">
           <div class="education-content">
             <h3>Web Development</h3>
             <p>
@@ -264,13 +374,48 @@
             </p>
             <p>
               Immersive software engineering coding bootcamp focused on
-              mastering HTML and JavaScript foundations, front- and back-end
-              development, and databases.
+              mastering HTML, JavaScript, and React foundations, front- and
+              back-end development, and databases.
             </p>
+            <div class="education-details">
+              <h4>Key Achievements:</h4>
+              <ul>
+                <li>
+                  Completed intensive 13-week program covering full-stack
+                  development
+                </li>
+                <li>
+                  Developed a full-stack applications using modern
+                  technologies
+                </li>
+                <li>
+                  Mastered core concepts of web development and software
+                  engineering
+                </li>
+                <li>
+                  Collaborated on team projects using industry-standard tools
+                  and practices
+                </li>
+              </ul>
+              <h4>Core Curriculum:</h4>
+              <ul>
+                <li>
+                  Frontend: React, JavaScript, HTML5, CSS3, Responsive Design
+                </li>
+                <li>
+                  Backend: Node.js, Express, RESTful APIs
+                </li>
+                <li>Tools: Git, GitHub, VS Code, Postman, Command Line</li>
+                <li>
+                  Best Practices: Agile Development, Test-Driven Development,
+                  Code Reviews
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="certificate-container">
             <img
-              src="Outreach_FullStack_Certificate Web Development_Raidt_pages-to-jpg-0001.jpg"
+              src="images/Outreach_FullStack_Certificate Web Development_Raidt_pages-to-jpg-0001.jpg"
               alt="Web Development Certificate"
               class="certificate-image"
               id="certificate"
@@ -279,24 +424,41 @@
         </div>
       </section>
 
-      <section id="contact">
+      <section id="contact" data-aos="fade-up" data-aos-duration="800">
         <h2>Contact Me</h2>
-        <div class="contact-info">
-          <p>ryanraidt1026@gmail.com | Kingfisher, OK</p>
-          <div class="social-links">
-            <a href="https://linkedin.com/in/ryan-raidt" target="_blank"
-              >LinkedIn</a
-            >
-            <a href="https://github.com/RyanRaidt" target="_blank">GitHub</a>
+        <div class="contact-container">
+          <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
+            <p>ryanraidt1026@gmail.com | Kingfisher, OK</p>
+            <div class="social-links">
+              <a href="https://linkedin.com/in/ryan-raidt" target="_blank"
+                >LinkedIn</a
+              >
+              <a href="https://github.com/RyanRaidt" target="_blank">GitHub</a>
+            </div>
           </div>
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+          </form>
         </div>
-        <form name="contact" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact" />
-          <input type="text" name="name" placeholder="Name" required />
-          <input type="email" name="email" placeholder="Email" required />
-          <textarea name="message" placeholder="Message" required></textarea>
-          <button type="submit">Send</button>
-        </form>
       </section>
     </main>
 
@@ -309,6 +471,7 @@
       <img class="modal-content" id="certificate-large" />
     </div>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
