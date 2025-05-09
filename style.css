@@ -73,6 +73,46 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1001;
+}
+
+.hamburger-menu span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
 nav ul {
   display: flex;
   justify-content: center;
@@ -411,25 +451,43 @@ footer {
     padding: 0.5rem 0;
   }
 
+  .hamburger-menu {
+    display: flex;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--secondary-bg);
+    flex-direction: column;
+    align-items: center;
+    padding: calc(60px + var(--spacing-xl)) 0 var(--spacing-md) 0;
+    gap: var(--spacing-md);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  nav ul.active {
+    transform: translateY(0);
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: var(--spacing-sm) 0;
+  }
+
   main {
     padding-top: 60px;
     padding-left: var(--spacing-md);
     padding-right: var(--spacing-md);
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-sm) 0;
-  }
-
-  nav ul li {
-    margin: 0.25rem 0;
-  }
-
-  nav ul li a {
-    padding: 0.25rem 0;
   }
 
   .profile-container {
@@ -850,13 +908,15 @@ a:hover {
 
 @media (max-width: 768px) {
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: var(--spacing-lg);
     padding: 0 var(--spacing-md);
   }
 
   .skill-category {
     padding: var(--spacing-md);
+    width: 100%;
   }
 
   .skill-category h3 {
@@ -866,7 +926,6 @@ a:hover {
 
 @media (max-width: 480px) {
   .skills-grid {
-    grid-template-columns: 1fr;
     gap: var(--spacing-md);
   }
 
